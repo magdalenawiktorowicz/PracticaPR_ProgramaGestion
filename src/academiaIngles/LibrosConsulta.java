@@ -17,14 +17,17 @@ public class LibrosConsulta implements WindowListener, ActionListener, KeyListen
 {
 	Frame ventana = new Frame("Libros - Consulta");
 	Label lblAlta = new Label("____________________ CONSULTA DE LIBROS ____________________");
-	TextArea txtaConsulta = new TextArea(10,84);
+	TextArea txtaConsulta = new TextArea(10,90);
 	Label lblExportar = new Label("Exportar en:");
 	Button btnPDF = new Button("PDF");
 	Button btnEXCEL = new Button("EXCEL");
 	
 	BDConexion conexion = new BDConexion();
 
-	LibrosConsulta() {
+	String usuario = "";
+	
+	LibrosConsulta(String u) {
+		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
 		// color de fondo
@@ -38,6 +41,9 @@ public class LibrosConsulta implements WindowListener, ActionListener, KeyListen
 		// obtener los datos de todos registros de la tabla libros
 		txtaConsulta.append(conexion.obtenerLibros());
 		
+		String sentencia = "SELECT * FROM libros";
+		conexion.apunteLog(usuario, sentencia);
+		txtaConsulta.setFocusable(false);
 		ventana.add(txtaConsulta);
 		ventana.add(lblExportar);
 		btnPDF.addActionListener(this);
@@ -55,7 +61,14 @@ public class LibrosConsulta implements WindowListener, ActionListener, KeyListen
 	
 	@Override
 	public void keyTyped(KeyEvent e)
-	{}
+	{
+		if (e.getSource().equals(btnPDF)) {
+			conexion.generatePDFLibros();
+		}
+		else if (e.getSource().equals(btnEXCEL)) {
+			conexion.generateExcelLibros();
+		}
+	}
 
 	@Override
 	public void keyPressed(KeyEvent e)
@@ -67,7 +80,14 @@ public class LibrosConsulta implements WindowListener, ActionListener, KeyListen
 
 	@Override
 	public void actionPerformed(ActionEvent e)
-	{}
+	{
+		if (e.getSource().equals(btnPDF)) {
+			conexion.generatePDFLibros();
+		}
+		else if (e.getSource().equals(btnEXCEL)) {
+			conexion.generateExcelLibros();
+		}
+	}
 
 	@Override
 	public void windowOpened(WindowEvent e)

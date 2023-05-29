@@ -15,58 +15,61 @@ import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class PersonasBaja implements WindowListener, ActionListener, KeyListener
+public class PersonasLibrosBaja implements WindowListener, ActionListener, KeyListener
 {
-	// componentes de la ventana de elegir una persona para dar de baja
-	Frame ventana = new Frame("Personas - Baja");
-	Label lblBaja = new Label("_______ BAJA DE PERSONA _______");
-	Label lblElegir = new Label("Elige a la persona a eliminar:");
-	Choice choPersonas = new Choice();
+	// componentes de la ventana de elegir una relación para dar de baja
+	Frame ventana = new Frame("Personas-Libros - Baja");
+	Label lblBaja = new Label("                                                          BAJA DE LA RELACIÓN                                                          ");
+	Label lblBaja2 = new Label("                                                          PERSONA - LIBRO                                                          ");
+	Label lblElegir = new Label("Elige a la relación a eliminar:");
+	Choice choPersonasLibros = new Choice();
 	Button btnEliminar = new Button("Eliminar");
 	Button btnCancelar = new Button("Cancelar");
-	
+
 	// componentes del diálogo de confirmación de baja
 	Dialog dlgConfirmar = new Dialog(ventana, "", true);
 	Label lblConfirmar = new Label("¿Estás seguro que quieres eliminar...");
-	TextField txtPersona = new TextField(20);
+	TextField txtPersona = new TextField(55);
 	Label lblConfirmar2 = new Label("?");
 	Button btnSi = new Button("Sí");
 	Button btnNo = new Button("No");
-	
+
 	// diálogos de error y de éxito
 	Dialog dlgMensajeError = new Dialog(ventana, "Error", true);
 	Dialog dlgMensajeExito = new Dialog(ventana, "Éxito", true);
 	Label lblMensaje = new Label("");
-	
+
 	BDConexion conexion = new BDConexion();
-	
+
 	String usuario = "";
-	
-	PersonasBaja(String u) {
+
+	public PersonasLibrosBaja(String u)
+	{
 		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
 		// color del fondo
 		ventana.setBackground(new Color(255, 221, 203));
-		
+
 		ventana.add(lblBaja);
+		ventana.add(lblBaja2);
 		ventana.add(lblElegir);
-		// Rellenar el Choice con los elementos de la tabla personas
-		conexion.rellenarChoicePersonas(choPersonas);
-		ventana.add(choPersonas);
-		
+		// Rellenar el Choice con los elementos de la tabla personasLibros
+		conexion.rellenarChoicePersonasLibros(choPersonasLibros);
+		ventana.add(choPersonasLibros);
+
 		btnEliminar.addActionListener(this);
 		btnEliminar.addKeyListener(this);
 		ventana.add(btnEliminar);
 		btnCancelar.addActionListener(this);
 		btnCancelar.addKeyListener(this);
 		ventana.add(btnCancelar);
-		
-		ventana.setSize(265, 170);
+
+		ventana.setSize(530, 200);
 		ventana.setResizable(false);
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
-		
+
 		// montar los diálogos de error o de éxito
 		dlgMensajeError.setLayout(new FlowLayout());
 		dlgMensajeError.setSize(265, 100);
@@ -79,26 +82,28 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 		dlgMensajeExito.setResizable(false);
 		dlgMensajeExito.setLocationRelativeTo(null);
 	}
-	
+
 	@Override
 	public void keyTyped(KeyEvent e)
 	{
-		if (e.getSource().equals(btnCancelar)) {
+		if (e.getSource().equals(btnCancelar))
+		{
 			ventana.setVisible(false);
-		}
-		else if(e.getSource().equals(btnEliminar)) {
-			// si está elegido alguna persona mostrar el diálogo de confirmación de su baja
-			if(choPersonas.getSelectedIndex()!=0) {
+		} else if (e.getSource().equals(btnEliminar))
+		{
+			// si está elegido alguna relación mostrar el diálogo de confirmación de su baja
+			if (choPersonasLibros.getSelectedIndex() != 0)
+			{
 				// 0 es el primer elemento en choPersonas
 				dlgConfirmar.setLayout(new FlowLayout());
 				dlgConfirmar.addWindowListener(this);
 				dlgConfirmar.setBackground(new Color(255, 221, 203));
-				dlgConfirmar.setSize(240, 127);
+				dlgConfirmar.setSize(520, 127);
 				dlgConfirmar.setResizable(false);
 				dlgConfirmar.setLocationRelativeTo(null);
 				dlgConfirmar.add(lblConfirmar);
-				// mostrar el nombre y los apellidos de la persona elegida en el diálogo de confirmación
-				txtPersona.setText(choPersonas.getSelectedItem());
+				// mostrar los detos del registro elegido en el diálogo de confirmación
+				txtPersona.setText(choPersonasLibros.getSelectedItem());
 				txtPersona.setEditable(false);
 				dlgConfirmar.add(txtPersona);
 				dlgConfirmar.add(lblConfirmar2);
@@ -108,39 +113,44 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 				btnNo.addActionListener(this);
 				btnNo.addKeyListener(this);
 				dlgConfirmar.add(btnNo);
-				
+
 				dlgConfirmar.setVisible(true);
-			}
-			else {
-				lblMensaje.setText("No has elegido ninguna persona.");
+			} else
+			{
+				dlgConfirmar.setVisible(false);
+				lblMensaje.setText("No has elegido ninguna relación.");
 				dlgMensajeError.add(lblMensaje);
 				dlgMensajeError.setVisible(true);
 			}
-		}
-		else if(e.getSource().equals(btnNo)) {
+		} else if (e.getSource().equals(btnNo))
+		{
 			dlgConfirmar.setVisible(false);
-		}
-		else if(e.getSource().equals(btnSi)) {
-			
-			if(choPersonas.getSelectedIndex()!=0) {
-				// rellenar la tabla[] con los datos de la persona elegida
-				String tabla[] = choPersonas.getSelectedItem().split(" ");
-				//eliminar una persona pasándo como parámetro el número identificador (campo clave - único)
-				int resultado = conexion.eliminarPersona(tabla[0]); // idPersona --> DELETE
-				if (resultado == 0) {
-				// Baja correcta
-					String sentenciaLog = "DELETE FROM personas WHERE idPersona = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + ");";
+		} else if (e.getSource().equals(btnSi))
+		{
+
+			if (choPersonasLibros.getSelectedIndex() != 0)
+			{
+				// rellenar la tabla[] con los datos de la relación elegida
+				String tabla[] = choPersonasLibros.getSelectedItem().split(" ");
+				// eliminar la relación pasándo como parámetro el número identificador (campo
+				// clave - único)
+				int resultado = conexion.eliminarPersonaLibro(tabla[0]); // idPersonaLibro --> DELETE
+				if (resultado == 0)
+				{
+					// Baja correcta
+					String sentenciaLog = "DELETE FROM personasLibros WHERE idPersonaLibro = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + " " + tabla[4] + " " + tabla[5] + " " + tabla[6] + " " + tabla[7] + ");";
 					conexion.apunteLog(usuario, sentenciaLog);
 					dlgConfirmar.setVisible(false);
 					lblMensaje.setText("La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);
 					dlgMensajeExito.setVisible(true);
-				} else {
-				// Error en baja
-				dlgConfirmar.setVisible(false);
-				lblMensaje.setText("Ha ocurrido un error.");
-				dlgMensajeError.add(lblMensaje);
-				dlgMensajeError.setVisible(true);
+				} else
+				{
+					// Error en baja
+					dlgConfirmar.setVisible(false);
+					lblMensaje.setText("Ha ocurrido un error.");
+					dlgMensajeError.add(lblMensaje);
+					dlgMensajeError.setVisible(true);
 				}
 			}
 		}
@@ -148,31 +158,35 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 
 	@Override
 	public void keyPressed(KeyEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void keyReleased(KeyEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		if (e.getSource().equals(btnCancelar)) {
+		if (e.getSource().equals(btnCancelar))
+		{
 			ventana.setVisible(false);
-		}
-		else if(e.getSource().equals(btnEliminar)) {
-			// si está elegido alguna persona mostrar el diálogo de confirmación de su baja
-			if(choPersonas.getSelectedIndex()!=0) {
+		} else if (e.getSource().equals(btnEliminar))
+		{
+			// si está elegido alguna relación mostrar el diálogo de confirmación de su baja
+			if (choPersonasLibros.getSelectedIndex() != 0)
+			{
 				// 0 es el primer elemento en choPersonas
 				dlgConfirmar.setLayout(new FlowLayout());
 				dlgConfirmar.addWindowListener(this);
 				dlgConfirmar.setBackground(new Color(255, 221, 203));
-				dlgConfirmar.setSize(240, 127);
+				dlgConfirmar.setSize(520, 127);
 				dlgConfirmar.setResizable(false);
 				dlgConfirmar.setLocationRelativeTo(null);
 				dlgConfirmar.add(lblConfirmar);
-				// mostrar el nombre y los apellidos de la persona elegida en el diálogo de confirmación
-				txtPersona.setText(choPersonas.getSelectedItem());
+				// mostrar los detos del registro elegido en el diálogo de confirmación
+				txtPersona.setText(choPersonasLibros.getSelectedItem());
 				txtPersona.setEditable(false);
 				dlgConfirmar.add(txtPersona);
 				dlgConfirmar.add(lblConfirmar2);
@@ -182,39 +196,44 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 				btnNo.addActionListener(this);
 				btnNo.addKeyListener(this);
 				dlgConfirmar.add(btnNo);
-				
+
 				dlgConfirmar.setVisible(true);
-			}
-			else {
-				lblMensaje.setText("No has elegido ninguna persona.");
+			} else
+			{
+				dlgConfirmar.setVisible(false);
+				lblMensaje.setText("No has elegido ninguna relación.");
 				dlgMensajeError.add(lblMensaje);
 				dlgMensajeError.setVisible(true);
 			}
-		}
-		else if(e.getSource().equals(btnNo)) {
+		} else if (e.getSource().equals(btnNo))
+		{
 			dlgConfirmar.setVisible(false);
-		}
-		else if(e.getSource().equals(btnSi)) {
-			
-			if(choPersonas.getSelectedIndex()!=0) {
-				// rellenar la tabla[] con los datos de la persona elegida
-				String tabla[] = choPersonas.getSelectedItem().split(" ");
-				//eliminar una persona pasándo como parámetro el número identificador (campo clave - único)
-				int resultado = conexion.eliminarPersona(tabla[0]); // idPersona --> DELETE
-				if (resultado == 0) {
-				// Baja correcta
-					String sentenciaLog = "DELETE FROM personas WHERE idPersona = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + ");";
+		} else if (e.getSource().equals(btnSi))
+		{
+
+			if (choPersonasLibros.getSelectedIndex() != 0)
+			{
+				// rellenar la tabla[] con los datos de la relación elegida
+				String tabla[] = choPersonasLibros.getSelectedItem().split(" ");
+				// eliminar la relación pasándo como parámetro el número identificador (campo
+				// clave - único)
+				int resultado = conexion.eliminarPersonaLibro(tabla[0]); // idPersonaLibro --> DELETE
+				if (resultado == 0)
+				{
+					// Baja correcta
+					String sentenciaLog = "DELETE FROM personasLibros WHERE idPersonaLibro = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + " " + tabla[4] + " " + tabla[5] + " " + tabla[6] + " " + tabla[7] + ");";
 					conexion.apunteLog(usuario, sentenciaLog);
 					dlgConfirmar.setVisible(false);
 					lblMensaje.setText("La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);
 					dlgMensajeExito.setVisible(true);
-				} else {
-				// Error en baja
-				dlgConfirmar.setVisible(false);
-				lblMensaje.setText("Ha ocurrido un error.");
-				dlgMensajeError.add(lblMensaje);
-				dlgMensajeError.setVisible(true);
+				} else
+				{
+					// Error en baja
+					dlgConfirmar.setVisible(false);
+					lblMensaje.setText("Ha ocurrido un error.");
+					dlgMensajeError.add(lblMensaje);
+					dlgMensajeError.setVisible(true);
 				}
 			}
 		}
@@ -222,7 +241,8 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 
 	@Override
 	public void windowOpened(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowClosing(WindowEvent e)
@@ -230,17 +250,15 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 		if (dlgConfirmar.isActive())
 		{
 			dlgConfirmar.setVisible(false);
-		} 
-		else if (dlgMensajeError.isActive() || dlgMensajeExito.isActive())
+		} else if (dlgMensajeError.isActive() || dlgMensajeExito.isActive())
 		{
 			dlgConfirmar.setVisible(false);
 			dlgMensajeError.setVisible(false);
 			dlgMensajeExito.setVisible(false);
-			// Rellenar el Choice con los elementos de la tabla personas
+			// Rellenar el Choice con los elementos de la tabla personasLibros
 			// de nuevo después de haber borrado un registro
-			conexion.rellenarChoicePersonas(choPersonas);
-		} 
-		else
+			conexion.rellenarChoicePersonasLibros(choPersonasLibros);
+		} else
 		{
 			ventana.setVisible(false);
 		}
@@ -248,22 +266,27 @@ public class PersonasBaja implements WindowListener, ActionListener, KeyListener
 
 	@Override
 	public void windowClosed(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowIconified(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowDeiconified(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowActivated(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowDeactivated(WindowEvent e)
-	{}
-	
+	{
+	}
+
 }

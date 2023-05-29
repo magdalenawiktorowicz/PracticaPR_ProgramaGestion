@@ -81,9 +81,10 @@ public class Login implements WindowListener, ActionListener, KeyListener
 				dlgMensaje.setVisible(true);
 			}
 			else {
+				conexion.apunteLog(usuario, "LOGIN");
 				// las credenciales con correctas abrir el menú principal
 				// pasando el tipo de usuario como parámetro
-				new MenuPrincipal(res);
+				new MenuPrincipal(res, usuario);
 				// ocultar la ventana de Login
 				ventanaLogin.setVisible(false);
 			}
@@ -149,9 +150,10 @@ public class Login implements WindowListener, ActionListener, KeyListener
 				dlgMensaje.setVisible(true);
 			}
 			else {
+				conexion.apunteLog(usuario, "LOGIN");
 				// las credenciales con correctas abrir el menú principal
 				// pasando el tipo de usuario como parámetro
-				new MenuPrincipal(res);
+				new MenuPrincipal(res, usuario);
 				// ocultar la ventana de Login
 				ventanaLogin.setVisible(false);
 			}

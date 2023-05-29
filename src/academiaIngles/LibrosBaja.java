@@ -40,7 +40,10 @@ public class LibrosBaja implements WindowListener, ActionListener, KeyListener
 	
 	BDConexion conexion = new BDConexion();
 	
-	LibrosBaja() {
+	String usuario = "";
+	
+	LibrosBaja(String u) {
+		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
 		// color del fondo
@@ -107,7 +110,12 @@ public class LibrosBaja implements WindowListener, ActionListener, KeyListener
 				dlgConfirmar.add(btnNo);
 				
 				dlgConfirmar.setVisible(true);
+			} else {
+				lblMensaje.setText("No has elegido ninguna persona.");
+				dlgMensajeError.add(lblMensaje);
+				dlgMensajeError.setVisible(true);
 			}
+			
 		}
 		else if(e.getSource().equals(btnNo)) {
 			dlgConfirmar.setVisible(false);
@@ -121,6 +129,8 @@ public class LibrosBaja implements WindowListener, ActionListener, KeyListener
 				int resultado = conexion.eliminarLibro(tabla[0]); // idLibro --> DELETE
 				if (resultado == 0) {
 				// Baja correcta
+					String sentenciaLog = "DELETE FROM libros WHERE idLibro = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + ");";
+					conexion.apunteLog(usuario, sentenciaLog);
 					dlgConfirmar.setVisible(false);
 					lblMensaje.setText("La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);
@@ -175,6 +185,11 @@ public class LibrosBaja implements WindowListener, ActionListener, KeyListener
 				
 				dlgConfirmar.setVisible(true);
 			}
+			else {
+				lblMensaje.setText("No has elegido ninguna persona.");
+				dlgMensajeError.add(lblMensaje);
+				dlgMensajeError.setVisible(true);
+			}
 		}
 		else if(e.getSource().equals(btnNo)) {
 			dlgConfirmar.setVisible(false);
@@ -187,6 +202,8 @@ public class LibrosBaja implements WindowListener, ActionListener, KeyListener
 				int resultado = conexion.eliminarLibro(tabla[0]); // idLibro --> DELETE
 				if (resultado == 0) {
 				// Baja correcta
+					String sentenciaLog = "DELETE FROM libros WHERE idLibro = " + tabla[0] + " (" + tabla[1] + " " + tabla[2] + " " + tabla[3] + ");";
+					conexion.apunteLog(usuario, sentenciaLog);
 					dlgConfirmar.setVisible(false);
 					lblMensaje.setText("La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);

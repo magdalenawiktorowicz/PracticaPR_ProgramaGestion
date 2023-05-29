@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MANUAL USUARIO - PROGRAMA GESTIÓN</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/ico" href="./favicon.ico">
+        <link rel="stylesheet" type="text/css" href="./estilos.css">
+    </head>
+    <body>
+        <header>
+            <h1>MANUAL USUARIO - PROGRAMA GESTIÓN</h1>
+            <img src="ayuda_html_d1e26bc2fe00f6fa.png" name="Image2" align="center" width="500" height="200" border="0" style="margin-bottom: 1cm;"/>
+            <br/>
+            </p>
+        </header>
+        <aside>
+            <ul>
+                <li><a href="#intro">Introducción</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#menuPrincipal">Menú Principal</a></li>
+                <li><a href="#alta">Personas / Libros – Alta</a></li>
+                <li><a href="#consulta">Personas / Libros – Consulta</a></li>
+                <li><a href="#modificacion">Personas / Libros – Modificación</a></li>
+                <li><a href="#baja">Personas / Libros – Baja</a></li>
+                <li><a href="#PLalta">Relación Personas-Libros: Alta</a></li>
+                <li><a href="#PLconsulta">Relación Personas-Libros: Consulta</a></li>
+                <li><a href="#PLmodificacion">Relación Personas-Libros: Modificación</a></li>
+                <li><a href="#PLbaja">Relación Personas-Libros: Baja</a></li>
+            </ul>
+        </aside>
+        <section>
+            <article id="intro">
+                <h2>Introducción</h2>
+                <p id="p1">Este
+                    documento es un Manual de Usuario del programa de gestión de una
+                    academia de inglés. El manual tiene como objetivo explicar al
+                    usuario el funcionamiento del programa de la academia en cuanto a la
+                    alta, baja, modificación y consulta tanto de los datos de personas y
+                    libros como de las relaciones entre ellos.</p>
+                    <p id="p1">El programa de gestión se conecta a una base de datos de la academia, donde hay una tabla de libros, 
+                        una tabla de personas y una tabla de relaciones entre las personas y los libros. Hay dos tipos de usuarios 
+                        que pueden entrar en el programa – el usuario básico y el administrador. A través del programa el usuario 
+                        Administrador puede dar de alta, consultar, modificar y/o dar de baja a una persona, un libro o una relación 
+                        entre ellos en la base de datos, mientras el usuario básico solo puede dar de alta a una persona, un libro o una 
+                        relación entre ellos.</p>
+            <hr/></article>
+            <article id="login">
+                <h2>Login</h2>
+                <p>Al
+                    abrir el programa, nos aparecerá una ventana de Login donde hay que
+                    introducir el nombre del usuario y abajo su clave correspondiente. La
+                    clave estará ocultada con el signo de asterisco ‘*’ por cada
+                    carácter introducido.</p>
+                <p id="img"><img src="ayuda_html_59a46cc916a39dc8.png" name="Image3" width="293" height="167" border="0"/></p>
+                <p>En
+                    el caso de que el usuario introduzca el nombre o la clave incorrecta
+                    o deje algún campo vacío, aparecerá otra ventana con un mensaje de
+                    error.</p>
+                <p id="img"><img src="ayuda_html_d58e334560e0b51f.png" name="Image4" width="207" height="97" border="0"/></p>
+                <p>Como hemos dicho antes, hay dos tipos de usuarios – el Administrador que tiene el acceso a todas las funciones del programa (las altas, bajas, modificaciones y consultas) y el Usuario que solo puede dar de alta.
+                </p>
+                <p id="img"><img src="ayuda_html_f50730f877b41b3c.png" name="Image5" width="297" height="167" border="0"/><img src="ayuda_html_b91a0bfaaea2e549.png" name="Image6" width="289" height="168" border="0"/></p>
+                <p>Una vez introducido el nombre del usuario y su clave, hay que pulsar el botón ‘Acceder’. Lo podemos hacer con el botón, o bien con la tecla Enter (después de pulsar la tecla tabulador), tanto aquí en la ventana de Login, como en todo el programa. Así accedemos el Menú Principal del programa.</p>
+                <p>Cabe mencionar que al entrar en el sistema, todas las operaciones, incluyendo la entrada y salida de la sesión, se guardarán en el fichero historico.log con las informaciones de la fecha y la hora, el usuario y la operación que ha realizado.</p>
+            <hr/></article>
+            <article id="menuPrincipal">
+                <h2>Menú Principal</h2>
+                <p>Menú principal desde la perspectiva del usuario básico:</p>
+                <p id="img"><img src="ayuda_html_8980e7dffdf5582d.png" name="Image1" width="358" height="302" border="0"/><img src="ayuda_html_99315f0df2b35fd9.png" name="Image7" width="362" height="304" border="0"/><img src="ayuda_html_bd71743759f863f3.png" name="Image34" width="358" height="304" border="0"/></p>
+                <p>Menú principal desde la perspectiva del usuario Administrador:</p>
+                <p id="img"><img src="ayuda_html_be7bed9074131d28.png" name="Image8" width="362" height="305" border="0"/>
+                    <img src="ayuda_html_930e459e75ea91ee.png" name="Image9" width="361" height="307" border="0"/><img src="ayuda_html_1721cd25325857a7.png" name="Image35" width="363" height="306" border="0"/></p>
+                <p>Vemos tres menús desplegables de Personas, Libros y Personas-Libros, desde los cuales podemos acceder a las ventanas de alta, baja, modificación y consulta.</p>
+            <hr/></article>
+            <article id="alta">
+                <h2>Personas / Libros – Alta</h2>
+                <p>En la ventana de alta podemos insertar los datos de una persona, por ejemplo un nuevo alumno, o de un libro usado en la academia.</p>
+                <p id="img"><img src="ayuda_html_2ba0ad6241ee2e4e.png" name="Image10" width="366" height="338" border="0"/></p>
+                <p>La ventana de alta es muy sencilla. En cada campo de texto hay que introducir algunos datos; en el caso de alta de persona, son datos personales como nombre, apellidos, teléfono, correo electrónico y dirección.
+                    No es posible introducir la misma persona más de una vez. En el caso de que el correo electrónico que hayamos escrito corresponda al correo de una persona que ya aparezca en la base de datos, el programa no nos dejaría dar de alta a esta persona.</p>
+                <p>En cuanto a libros, se debe introducir el nombre del libro, el nivel de inglés, autor o autores y editorial.</p>
+                <p id="img"><img src="ayuda_html_8281e6a4d0966aa0.png" name="Image11" width="334" height="279" border="0"/></p>
+                <p>No es posible introducir el mismo libro más de una vez. El programa verificará si el nombre del libro corresponde a algún libro de la base de datos y en el caso de que sí, no nos dejaría dar de alta a este libro.</p>
+                <p>En ambos casos, si intentemos dar de alta a una persona o un libro que ya existe en la base de datos, nos aparecerá una ventana nueva con un mensaje así:</p>
+                <p id="img"><img src="ayuda_html_acdd8e5b775e21ae.png" name="Image12" width="367" height="340" border="0"/></p>
+                <p>De igual forma será comprobado en el caso de libros.</p>
+                <p id="img"><img src="ayuda_html_be62f64da96cf23.png" name="Image13" width="327" height="266" border="0"/></p>
+                <p>No se puede dejar ningún campo sin rellenar. Si intentamos hacerlo, nos dará un mensaje así:</p>
+                <p id="img"><img src="ayuda_html_c5f59939f63fe3ac.png" name="Image14" width="316" height="118" border="0"/></p>
+                <p>Si en vez de un número, introducimos una cadena de caracteres, también saldría un mensaje de error:</p>
+                <p id="img"><img src="ayuda_html_6592361e2d4fc9.png" name="Image15" width="567" height="329" border="0"/></p>
+                <p>Para vaciar todos los campos, hay que pulsar el botón ‘Borrar’.</p>
+                <p>Cuando tenemos todos los campos correctamente rellenados, pulsamos ‘Aceptar’ para enviar los datos a la base de datos.</p>
+                <p id="img"><img src="ayuda_html_2de7323222c60900.png" name="Image16" width="569" height="337" border="0"/></p>
+                <p>Una vez hecho el alta y cerrado el mensaje de que la operación se ha ejecutado correctamente, nos quedará la ventana de alta con todos los campos vacíos para introducir el siguiente registro.</p>
+            <hr/></article>
+            <article id="consulta">
+                <h2>Personas / Libros – Consulta</h2>
+                <p>La opción de consultar los datos de personas y libros de la academia solo está disponible para el administrador.</p>
+                <p>La consulta se puede acceder desde el menú principal pulsando o Personas o Libros y luego en el menú desplegable ‘Consulta’. Aparecerá una venta así:</p>
+                <p id="img"><img src="ayuda_html_dff8ed7fb425d9f2.png" name="Image18" width="803" height="255" border="0"/></p>
+                <p id="img"><img src="ayuda_html_c63284f13692acad.png" name="Image17" width="803" height="277" border="0"/></p>
+                <p>Se debe mencionar que no es posible distorsionar ninguna de las ventanas del programa. No obstante, en el caso de consulta donde normalmente se muestran muchos datos, se puede usar la barra de desplazamiento, tanto horizontal como vertical.</p>
+                <p>Al pulsar el botón ‘PDF’ o ‘EXCEL’, se generaría y se abriría inmediatamente un archivo de formato PDF o Excel, respectivamente.</p>
+            <hr/></article>
+            <article id="modificacion">
+                <h2>Personas / Libros – Modificación</h2>
+                <p>La opción de modificar los datos de personas y de libros de la academia solo está disponible para el administrador.</p>
+                <p>Para modificar los datos de una persona o un libro que ya existe en la base de datos, accedemos a la ventana de modificación desde el menú principal.</p>
+                <p id="img"><img src="ayuda_html_b5f1828e78bcd224.png" name="Image19" width="358" height="306" border="0"/></p>
+                <p>Una vez abierta esta ventana, hay que seleccionar la persona cuyos datos queremos modificar.</p>
+                <p id="img"><img src="ayuda_html_58422589cc73fbb4.png" name="Image20" width="320" height="209" border="0"/>
+                    <img src="ayuda_html_67002abdc10fee82.png" name="Image21" width="324" height="211" border="0"/>
+                    <img src="ayuda_html_54fd9d6098501a9b.png" name="Image22" width="318" height="209" border="0"/></p>
+                <p>Si pulsamos el botón ‘Cancelar’, volveríamos al menú principal.</p>
+                <p>Si pulsamos el botón ‘Modificar’ sin haber elegido ninguna opción (es decir, dejando lo que aparece por defecto), saldría la ventana con un aviso.</p>
+                <p id="img"><img src="ayuda_html_f3c641513374ccce.png" name="Image23" width="445" height="276" border="0"/></p>
+                <p>Si pulsamos el botón ‘Modificar’ después de seleccionar alguna persona, abrirá una ventana con todos los datos de esta persona.</p>
+                <p id="img"><img src="ayuda_html_551f5d70af07e2f1.png" name="Image24" width="362" height="355" border="0"/></p>
+                <p>Aquí podemos editar cualquier campo, menos el identificador que no se puede modificar. Similar a la ventana de alta, es obligatorio rellenar todos los campos.</p>
+                <p id="img"><img src="ayuda_html_c048dcd57d991ac2.png" name="Image25" width="543" height="351" border="0"/></p>
+                <p>Una vez hemos terminado de editar los datos, damos a ‘Aceptar’. Nos saldrá un mensaje de confirmación.</p>
+                <p id="img"><img src="ayuda_html_1c9e1f9e558ab40e.png" name="Image26" width="357" height="354" border="0"/></p>
+                <p>En el caso de que no estemos seguros de la modificación, podemos pulsar ‘No’. De esta manera volveríamos a la ventana de modificación. Si ya estamos seguros de las nuevas modificaciones pulsamos ‘Sí’.</p>
+                <p id="img"><img src="ayuda_html_a737d78759e76c66.png" name="Image27" width="305" height="116" border="0"/></p>
+                <p>El proceso es igual en cuanto a la modificación de un libro.</p>
+            <hr/></article>
+            <article id="baja">
+                <h2>Personas / Libros – Baja</h2>
+                <p>La opción ‘Baja’ de los datos de personas y de libros de la academia solo está disponible para el administrador.</p>
+                <p>Para llegar a la ventana de baja, hay que pulsar ‘Baja’ en el menú desplegable de ‘Personas’ o ‘Libros’ en la ventana principal.</p>
+                <p id="img"><img src="ayuda_html_bac87cf9c6e57b63.png" name="Image28" width="361" height="305" border="0"/></p>
+                <p>Una vez pulsada la baja, se mostrará una ventana de baja donde, desde la lista desplegable, hay que elegir una persona (o en el caso de libros – un libro) a eliminar de la base de datos.</p>
+                <p id="img"><img src="ayuda_html_9950ed9086beb716.png" name="Image29" width="347" height="229" border="0"/></p>
+                <p id="img"><img src="ayuda_html_1b1c415acee90ae.png" name="Image30" width="335" height="251" border="0"/></p>
+                <p>Si pulsamos ‘Cancelar’, volveríamos al menú principal.</p>
+                <p>Si pulsamos el botón ‘Eliminar’ sin haber elegido ninguna opción (es decir, dejando lo que aparece por defecto), saldría la ventana con un aviso.</p>
+                <p id="img"><img src="ayuda_html_da1a1345e9ca0f1b.png" name="Image36" width="465" height="205" border="0"/></p>
+                <p>Habiendo seleccionado una persona, pulsamos ‘Eliminar’. Nos aparecerá otra ventana de confirmación con el nombre y apellidos de la persona elegida.</p>
+                <p id="img"><img src="ayuda_html_fe2d28240fc99da9.png" name="Image31" width="516" height="259" border="0"/></p>
+                <p>Pulsando ‘No’ volveríamos a la ventana donde se puede elegir una persona. Si pulsamos ‘Sí’ nos saldría uno de dos posible resultados:</p>
+                <p>- la baja se ha realizado con éxito</p>
+                <p id="img"><img src="ayuda_html_b8dfe3c8c01e6140.png" name="Image32" width="316" height="115" border="0"/></p>
+                <p>- o que no era posible por alguna razón dar de baja</p>
+                <p id="img"><img src="ayuda_html_2c08b3bfff41f220.png" name="Image33" width="313" height="114" border="0"/></p>
+                <p>El proceso es igual en cuanto a la modificación de un libro.</p>
+            <hr/></article>
+            <article id="PLalta">
+                <h2>Relación Personas-Libros: Alta</h2>
+                <p>En la ventana de Alta de Personas-Libros, podemos introducir una relación entre una persona y un libro. Para hacerlo, hay que seleccionar en el primer menú desplegable una persona cuyo registro ya existe en el sistema y en el segundo menú desplegable un libro, el cual también ya existe en el sistema. Una vez seleccionados la persona y el libro, pulsamos ‘Aceptar’.</p>
+                <p id="img"><img src="ayuda_html_227bca19ff1505f0.png" name="Image37" width="300" height="205" border="0"/></p>
+                <p>No es posible dar de alta a una relación que ya aparece en el sistema. Por lo cual, si elegimos una persona y un libro que ya están relacionados entre sí, nos aparecerá una ventana con el siguiente mensaje:</p>
+                <p id="img"><img src="ayuda_html_d8bc5d1f31a97378.png" name="Image38" width="302" height="89" border="0"/></p>
+                <p>En el caso de pulsar el botón ‘Aceptar’ sin haber seleccionado o una persona, o un libro, o ambos, saldrá un mensaje de error así:</p>
+                <p id="img"><img src="ayuda_html_7d71884f6f8f84bd.png" name="Image39" width="340" height="90" border="0"/></p>
+                <p>Si por alguna razón la alta no se realiza correctamente, aparecerá un mensaje de error siguiente:</p>
+                <p id="img"><img src="ayuda_html_913de996a69ef320.png" name="Image40" width="279" height="88" border="0"/></p>
+                <p>Cuando la alta de la relación entre una persona y un libro se ejecuta correctamente, veríamos este mensaje:</p>
+                <p id="img"><img src="ayuda_html_408d72432000f9ae.png" name="Image41" width="429" height="236" border="0"/></p>
+            <hr/></article>
+            <article id="PLconsulta">
+                <h2>Relación Personas-Libros: Consulta</h2>
+                <p>La opción de consultar los datos de la relación persona-libro de la academia solo está disponible para el administrador.</p>
+                <p>La consulta de las relaciones entre personas y libros se puede acceder desde el menú principal pulsando ‘Personas-Libros’ y luego en el menú desplegable ‘Consulta’. Aparecerá una ventana así:</p>
+                <p id="img"><img src="ayuda_html_97c55495f83de7a.png" name="Image42" width="803" height="259" border="0"/></p>
+                <p>No es posible redimensionar esta ventana. Sin embargo, en el caso de que haya muchos datos a mostrar, se puede usar la barra de desplazamiento, tanto horizontal como vertical.</p>
+                <p>Además, se puede generar un archivo de formato PDF o Excel al pulsar los botones en la parte inferior, respectivamente. Una vez pulsado el botón, se abrirá un fichero en el formato elegido.</p>
+            <hr/></article>
+            <article id="PLmodificacion">
+                <h2>Relación Personas-Libros: Modificación</h2>
+                <p>La opción de modificar los datos de la relación persona-libro de la academia solo está disponible para el administrador.</p>
+                <p>Para modificar los datos de una relación persona-libro existente, es decir cambiar una persona por otra o cambiar un libro por otro, accedemos a la ventana de modificación desde el menú principal.</p>
+                <p id="img"><img src="ayuda_html_287f0db780aa60fc.png" name="Image43" width="361" height="307" border="0"/></p>
+                <p>Una vez abierta esta ventana, hay que seleccionar la relación que queremos modificar desde el menú desplegable.</p>
+                <p id="img"><img src="ayuda_html_9f970e1ade81e235.png" name="Image44" width="653" height="178" border="0"/></p>
+                <p id="img"><img src="ayuda_html_c55a7dfea7d520f4.png" name="Image45" width="654" height="215" border="0"/></p>
+                <p>Si pulsamos el botón ‘Cancelar’, volveríamos al menú principal.</p>
+                <p>Si pulsamos en botón modificar sin haber elegido ninguna de las opciones, saldría una ventana con un aviso.</p>
+                <p id="img"><img src="ayuda_html_69ed4afaa1e0de9f.png" name="Image46" width="656" height="175" border="0"/></p>
+                <p>Una vez elegida la relación, pulsamos al botón ‘Modificar’.
+                    En la siguiente ventana que nos aparece podemos seleccionar de las listas desplegables o una persona diferente, o un libro diferente, o incluso ambos.</p>
+                <p>Cabe mencionar que la persona y el libro que se muestra por defecto son la persona y el libro de la relación que hemos seleccionado en la ventana anterior.</p>
+                <p id="img"><img src="ayuda_html_8a6b272b3586ef3.png" name="Image47" width="506" height="264" border="0"/></p>
+                <p>Si pulsamos el botón ‘Cancelar’, volveríamos a la ventana anterior donde hay que seleccionar una relación.</p>
+                <p>Si pulsamos el botón ‘Aceptar’, nos saldría una ventana de confirmación donde podemos comprobar los cambios.</p>
+                <p>En el caso de que dejemos la misma persona y el mismo libro y pulsemos ‘Sí’, nos aparecerá un mensaje de que esta relación ya existe y nos llevará a la primera ventana de modificación.</p>
+                <p id="img"><img src="ayuda_html_e09ff5e0afc09602.png" name="Image48" width="460" height="241" border="0"/></p>
+                <p id="img"><img src="ayuda_html_eb12cee2a5d2d959.png" name="Image49" width="574" height="245" border="0"/></p>
+                <p>Si en la ventana de confirmación pulsamos ‘No’, volveríamos a la ventana anterior donde podemos modificar la relación eligiendo una persona y un libro desde el menú desplegable.</p>
+                <p>Una vez que introducimos los cambios necesarios y pulsamos a ‘Sí’, nos saldrá un aviso siguiente:</p>
+                <p id="img"><img src="ayuda_html_281896237bd250e3.png" name="Image50" width="316" height="117" border="0"/></p>
+                <p>Si por alguna razón la modificación no se realiza correctamente, aparecerá un mensaje de error siguiente:</p>
+                <p id="img"><img src="ayuda_html_913de996a69ef320.png" name="Image51" width="283" height="103" border="0"/></p>
+            <hr/></article>
+            <article id="PLbaja">
+                <h2>Relación Personas-Libros: Baja</h2>
+                <p>La opción de ‘Baja’ de la relación persona-libro de la academia solo está disponible para el administrador.</p>
+                <p>Para llegar a la ventana de baja, hay que pulsar ‘Baja’ en el menú desplegable de ‘Personas-Libros’ en la ventana principal.</p>
+                <p id="img"><img src="ayuda_html_178fb86cb6077613.png" name="Image52"  width="361" height="303" border="0"/></p>
+                <p>Al pulsar la ‘Baja’, nos aparecerá una ventana donde podemos seleccionar la relación a la cual queremos dar de baja.</p>
+                <p id="img"><img src="ayuda_html_18109ce03413bf0d.png" name="Image53" width="647" height="241" border="0"/></p>
+                <p id="img"><img src="ayuda_html_5318b5677d39e810.png" name="Image54" width="647" height="279" border="0"/></p>
+                <p>Si pulsamos ‘Cancelar’, volveríamos a la ventana de menú principal.</p>
+                <p>Si pulsamos ‘Eliminar’ sin haber seleccionado ninguna relación, nos aparecerá un aviso siguiente:</p>
+                <p id="img"><img src="ayuda_html_b75239fc1fe4ed03.png" name="Image55" width="645" height="237" border="0"/></p>
+                <p>Cuando seleccionamos una relación que queremos borrar y pulsamos ‘Eliminar’, nos saldrá una ventana de confirmación.</p>
+                <p id="img"><img src="ayuda_html_aca1db40c12c031d.png" name="Image56" width="711" height="243" border="0"/></p>
+                <p>Si pulsamos ‘No’, el programa nos llevaría a la ventana anterior donde podemos elegir una relación otra vez.</p>
+                <p>Si pulsamos ‘Sí’ nos saldría uno de dos posibles resultados:</p>
+                <p>- la baja se ha realizado con éxito</p>
+                <p id="img"><img src="ayuda_html_281896237bd250e3.png" name="Image57" width="316" height="117" border="0"/></p>
+                <p>- o que no era posible por alguna razón dar de baja</p>
+                <p id="img"><img src="ayuda_html_913de996a69ef320.png" name="Image58" width="283" height="103" border="0"/></p>
+            <hr/></article>
+        </section>
+    </body>
+    <footer>
+        © 2023, Magdalena Wiktorowicz
+    </footer>
+</html>

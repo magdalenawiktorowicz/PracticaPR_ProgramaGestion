@@ -39,7 +39,10 @@ public class PersonasAlta implements WindowListener, ActionListener, KeyListener
 	
 	BDConexion conexion = new BDConexion();
 	
-	PersonasAlta() {
+	String usuario = "";
+	
+	PersonasAlta(String u) {
+		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
 		// establecer un color del fondo
@@ -131,6 +134,7 @@ public class PersonasAlta implements WindowListener, ActionListener, KeyListener
 					dlgMensajeError.setVisible(true);
 				} else // alta correcta
 				{
+					conexion.apunteLog(usuario, sentencia);
 					// monstrar un diálogo con mensaje de alta correcta
 					lblMensaje.setText("  La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);
@@ -243,6 +247,7 @@ public class PersonasAlta implements WindowListener, ActionListener, KeyListener
 					dlgMensajeError.setVisible(true);
 				} else // alta correcta
 				{
+					conexion.apunteLog(usuario, sentencia);
 					// monstrar un diálogo con mensaje de alta correcta
 					lblMensaje.setText("  La operación se ha ejecutado correctamente.");
 					dlgMensajeExito.add(lblMensaje);

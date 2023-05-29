@@ -13,11 +13,11 @@ import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class PersonasConsulta implements WindowListener, ActionListener, KeyListener
+public class PersonasLibrosConsulta implements WindowListener, ActionListener, KeyListener
 {
-	Frame ventana = new Frame("Personas - Consulta");
-	Label lblConsulta = new Label("____________________ CONSULTA DE PERSONA ____________________");
-	TextArea txtaConsulta = new TextArea(10,100);
+	Frame ventana = new Frame("Personas-Libros - Consulta");
+	Label lblConsulta = new Label("____________________ CONSULTA DE PERSONA-LIBRO ____________________");
+	TextArea txtaConsulta = new TextArea(10,93);
 	Label lblExportar = new Label("Exportar en:");
 	Button btnPDF = new Button("PDF");
 	Button btnEXCEL = new Button("EXCEL");
@@ -25,8 +25,9 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 	BDConexion conexion = new BDConexion();
 	
 	String usuario = "";
-	
-	PersonasConsulta(String u) {
+
+	PersonasLibrosConsulta(String u)
+	{
 		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
@@ -37,15 +38,17 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 		// bloquear la edición de datos
 		txtaConsulta.setEditable(false);
 		// poner el encabezado del listado
-		txtaConsulta.append("ID \t Nombre \t Primer Apellido \t Segundo Apellido \t Teléfono \t Correo Electrónico \t \t Dirección \t \n");
-		// obtener los datos de todos registros de la tabla personas
-		txtaConsulta.append(conexion.obtenerPersonas());
+		txtaConsulta.append("ID \t idPersona \t Nombre de Persona \t idLibro \t Nombre de Libro \t \t \t Nivel \t Autor \n");
+		// obtener los datos de todos registros de la tabla personasLibros
+		txtaConsulta.append(conexion.obtenerPersonasLibros());
 		
-		String sentencia = "SELECT * FROM personas";
+		// la setencia (simplificada) para apuntar en el log
+		String sentencia = "SELECT * FROM personasLibros";
 		conexion.apunteLog(usuario, sentencia);
-		txtaConsulta.setFocusable(false);
+		
 		ventana.add(txtaConsulta);
 		ventana.add(lblExportar);
+		txtaConsulta.setFocusable(false);
 		btnPDF.addActionListener(this);
 		btnPDF.addKeyListener(this);
 		ventana.add(btnPDF);
@@ -53,7 +56,7 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 		btnEXCEL.addKeyListener(this);
 		ventana.add(btnEXCEL);
 		
-		ventana.setSize(855, 270);
+		ventana.setSize(820, 270);
 		ventana.setResizable(false);
 		ventana.setLocationRelativeTo(null);
 		ventana.setVisible(true);
@@ -63,10 +66,10 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 	public void keyTyped(KeyEvent e)
 	{
 		if (e.getSource().equals(btnPDF)) {
-			conexion.generatePDFPersonas();
+			conexion.generatePDFPersonasLibros();
 		}
 		else if (e.getSource().equals(btnEXCEL)) {
-			conexion.generateExcelPersonas();
+			conexion.generateExcelPersonasLibros();
 		}
 	}
 
@@ -82,10 +85,10 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 	public void actionPerformed(ActionEvent e)
 	{
 		if (e.getSource().equals(btnPDF)) {
-			conexion.generatePDFPersonas();
+			conexion.generatePDFPersonasLibros();
 		}
 		else if (e.getSource().equals(btnEXCEL)) {
-			conexion.generateExcelPersonas();
+			conexion.generateExcelPersonasLibros();
 		}
 	}
 
@@ -109,7 +112,8 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 
 	@Override
 	public void windowDeiconified(WindowEvent e)
-	{}
+	{
+	}
 
 	@Override
 	public void windowActivated(WindowEvent e)
@@ -118,4 +122,5 @@ public class PersonasConsulta implements WindowListener, ActionListener, KeyList
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{}
+
 }

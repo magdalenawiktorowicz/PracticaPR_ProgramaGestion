@@ -54,7 +54,10 @@ public class LibrosModificacion implements WindowListener, ActionListener, KeyLi
 	
 	BDConexion conexion = new BDConexion();
 	
-	LibrosModificacion() {
+	String usuario = "";
+	
+	LibrosModificacion(String u) {
+		usuario = u;
 		ventana.setLayout(new FlowLayout());
 		ventana.addWindowListener(this);
 		ventana.setBackground(new Color(249, 245, 198));
@@ -203,6 +206,7 @@ public class LibrosModificacion implements WindowListener, ActionListener, KeyLi
 			// si el método de modificar devuelve un 0, todo se ha ejecutado bien
 			else
 			{
+				conexion.apunteLog(usuario, sentencia);
 				dlgConfirmar.setVisible(false);
 				dlgModificacion.setVisible(false);
 				lblMensaje.setText("La operación se ha ejecutado correctamente.");
@@ -335,6 +339,7 @@ public class LibrosModificacion implements WindowListener, ActionListener, KeyLi
 			// si el método de modificar devuelve un 0, todo se ha ejecutado bien
 			else
 			{
+				conexion.apunteLog(usuario, sentencia);
 				dlgConfirmar.setVisible(false);
 				dlgModificacion.setVisible(false);
 				lblMensaje.setText("La operación se ha ejecutado correctamente.");

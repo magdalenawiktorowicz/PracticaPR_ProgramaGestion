@@ -1,0 +1,1042 @@
+[2023/05/20 18:31:02][Administrador][LOGIN]
+
+[2023/05/20 18:31:10][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 3;]
+
+[2023/05/20 18:31:15][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 8;]
+
+[2023/05/20 18:31:21][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 11;]
+
+[2023/05/20 18:31:28][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 10;]
+
+[2023/05/20 18:31:39][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Ferrer), 1 (Optimise A2 Students);]
+
+[2023/05/20 18:31:49][Administrador][INSERT INTO personasLibros VALUES (null, 9 (Anabel Ruíz Hernandéz), 12 (Gold Advanced Coursebook);]
+
+[2023/05/20 18:31:52][Administrador][LOGOUT]
+
+[2023/05/20 18:33:40][Administrador][LOGIN]
+
+[2023/05/20 18:34:05][Administrador][LOGOUT]
+
+[2023/05/20 18:36:34][Administrador][LOGIN]
+
+[2023/05/20 18:37:10][Administrador][LOGOUT]
+
+[2023/05/20 18:38:17][Administrador][LOGIN]
+
+[2023/05/20 18:38:26][Administrador][INSERT INTO personasLibros VALUES (null, 6 (Antonio Pérez Jiménez), 11 (Gateway B2+ Students);]
+
+[2023/05/20 18:38:30][Administrador][LOGOUT]
+
+[2023/05/20 18:40:36][Administrador][LOGIN]
+
+[2023/05/20 18:40:53][Administrador][INSERT INTO personasLibros VALUES (null, 6 (Antonio Pérez Jiménez), 1 (Optimise A2 Students Book);]
+
+[2023/05/20 18:40:58][Administrador][INSERT INTO personasLibros VALUES (null, 6 (Antonio Pérez Jiménez), 2 (Optimise B1 Students Book);]
+
+[2023/05/20 18:41:06][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Ferrer), 11 (Gateway B2+ Students Book);]
+
+[2023/05/20 18:41:11][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Ferrer), 12 (Gold Advanced Coursebook C1);]
+
+[2023/05/20 18:41:22][Administrador][INSERT INTO personasLibros VALUES (null, 9 (Anabel Ruíz Hernandéz), 11 (Gateway B2+ Students Book);]
+
+[2023/05/20 18:41:26][Administrador][LOGOUT]
+
+[2023/05/20 18:42:36][Administrador][LOGIN]
+
+[2023/05/20 18:44:16][Administrador][LOGOUT]
+
+[2023/05/20 18:45:12][Administrador][LOGIN]
+
+[2023/05/20 18:45:21][Administrador][LOGOUT]
+
+[2023/05/20 18:45:44][Administrador][LOGIN]
+
+[2023/05/20 18:45:56][Administrador][LOGOUT]
+
+[2023/05/20 18:46:28][Administrador][LOGIN]
+
+[2023/05/20 18:46:37][Administrador][LOGOUT]
+
+[2023/05/20 18:46:59][Administrador][LOGIN]
+
+[2023/05/20 18:47:14][Administrador][LOGOUT]
+
+[2023/05/20 18:47:29][Administrador][LOGIN]
+
+[2023/05/20 18:47:43][Administrador][LOGOUT]
+
+[2023/05/20 18:47:57][Administrador][LOGIN]
+
+[2023/05/20 18:49:19][Administrador][UPDATE personas SET nombrePersona = 'Susana', primerApellidoPersona = 'García', segundoApellidoPersona = 'Rodríguez', telPersona = '876543216', correoElectronicoPersona = 'susanarodriguez@gmail.com', direccionPersona = 'calle Luis Montoto 15, Sevilla' WHERE idPersona = 7;]
+
+[2023/05/20 18:50:31][Administrador][SELECT * FROM personas]
+
+[2023/05/20 18:50:58][Administrador][LOGOUT]
+
+[2023/05/20 18:51:11][Administrador][LOGIN]
+
+[2023/05/20 19:00:13][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Molina', segundoApellidoPersona = 'Torres', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:00:20][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:00:51][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Molina', segundoApellidoPersona = 'Torres  ', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:00:56][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:01:14][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Molina', segundoApellidoPersona = 'Torres   ', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:01:18][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:02:24][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Molina', segundoApellidoPersona = 'García ', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:02:32][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:03:17][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Torres', segundoApellidoPersona = 'Moreno', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:03:21][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:03:26][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:04:21][Administrador][UPDATE personas SET nombrePersona = 'Andrés', primerApellidoPersona = 'Torres', segundoApellidoPersona = 'Serrano', telPersona = '636525410', correoElectronicoPersona = 'andres.torres32@gmail.com', direccionPersona = 'calle Sevilla 15, Barcelona' WHERE idPersona = 36;]
+
+[2023/05/20 19:04:26][Administrador][SELECT * FROM personas]
+
+[2023/05/20 19:04:52][Administrador][LOGOUT]
+
+[2023/05/20 19:05:30][Administrador][LOGIN]
+
+[2023/05/20 19:05:51][Administrador][LOGOUT]
+
+[2023/05/20 19:06:08][Administrador][LOGIN]
+
+[2023/05/20 19:09:03][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 19;]
+
+[2023/05/20 19:09:14][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 14;]
+
+[2023/05/20 19:10:05][Administrador][LOGOUT]
+
+[2023/05/20 19:10:36][Administrador][LOGIN]
+
+[2023/05/20 19:10:50][Administrador][LOGOUT]
+
+[2023/05/20 19:11:08][Administrador][LOGIN]
+
+[2023/05/20 19:11:25][Administrador][LOGOUT]
+
+[2023/05/20 19:11:44][Administrador][LOGIN]
+
+[2023/05/20 19:12:03][Administrador][LOGOUT]
+
+[2023/05/20 19:12:31][Administrador][LOGIN]
+
+[2023/05/20 19:12:40][Administrador][LOGOUT]
+
+[2023/05/20 19:13:09][Administrador][LOGIN]
+
+[2023/05/20 19:13:22][Administrador][LOGOUT]
+
+[2023/05/20 19:13:45][Administrador][LOGIN]
+
+[2023/05/20 19:13:56][Administrador][LOGOUT]
+
+[2023/05/20 19:14:07][Administrador][LOGIN]
+
+[2023/05/20 19:15:24][Administrador][UPDATE personasLibros SET idPersonaFK = 7, idLibroFK = 11 WHERE idPersonaLibro = 16;]
+
+[2023/05/20 19:15:53][Administrador][LOGOUT]
+
+[2023/05/20 19:16:44][Administrador][LOGIN]
+
+[2023/05/20 19:16:56][Administrador][LOGOUT]
+
+[2023/05/20 19:17:25][Administrador][LOGIN]
+
+[2023/05/20 19:18:01][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 11 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:18:07][Administrador][LOGOUT]
+
+[2023/05/20 19:18:52][Administrador][LOGIN]
+
+[2023/05/20 19:19:14][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 12 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:19:21][Administrador][LOGOUT]
+
+[2023/05/20 19:20:10][Administrador][LOGIN]
+
+[2023/05/20 19:20:27][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:20:41][Administrador][UPDATE personasLibros SET idPersonaFK = 7, idLibroFK = 1 WHERE idPersonaLibro = 16;]
+
+[2023/05/20 19:21:06][Administrador][LOGOUT]
+
+[2023/05/20 19:21:27][Administrador][LOGIN]
+
+[2023/05/20 19:21:51][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 12 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:22:07][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:22:14][Administrador][LOGOUT]
+
+[2023/05/20 19:24:22][Administrador][LOGIN]
+
+[2023/05/20 19:24:45][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 12 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:25:02][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 17;]
+
+[2023/05/20 19:25:29][Administrador][LOGOUT]
+
+[2023/05/20 19:29:31][Administrador][LOGIN]
+
+[2023/05/20 19:29:39][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 16 (Susana García Rodríguez Optimise A2 Students);]
+
+[2023/05/20 19:29:46][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 4 (Andrés Torres Serrano Optimise B1 Students);]
+
+[2023/05/20 19:29:54][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 9 (Andrés Torres Serrano Gateway B2+ Students);]
+
+[2023/05/20 19:29:57][Administrador][LOGOUT]
+
+[2023/05/20 19:31:25][Administrador][LOGIN]
+
+[2023/05/20 19:31:37][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 12 (Andrés Torres Serrano Optimise A2 Students Book);]
+
+[2023/05/20 19:31:43][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 21 (Anabel Ruíz Hernandéz Gateway B2+ Students Book);]
+
+[2023/05/20 19:31:50][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 20 (Susana García Rodríguez Gold Advanced Coursebook C1);]
+
+[2023/05/20 19:32:01][Administrador][LOGOUT]
+
+[2023/05/20 19:32:54][Administrador][LOGIN]
+
+[2023/05/20 19:33:22][Administrador][INSERT INTO personas VALUES (null, 'nombre', '1apellido', '2apellido', 4567, 'correo', 'direccion');]
+
+[2023/05/20 19:33:33][Administrador][DELETE FROM personas WHERE idPersona = 45;]
+
+[2023/05/20 19:33:50][Administrador][INSERT INTO libros VALUES (null, 'nombrelibro', 'nivellibro', 'autorlibro', 'editoriallibro');]
+
+[2023/05/20 19:34:00][Administrador][DELETE FROM libros WHERE idLibro = 19;]
+
+[2023/05/20 19:34:03][Administrador][LOGOUT]
+
+[2023/05/20 19:35:55][Administrador][LOGIN]
+
+[2023/05/20 19:36:09][Administrador][INSERT INTO personas VALUES (null, 'nombre', 'apell', 'segundo', 23456, 'correo', 'dir');]
+
+[2023/05/20 19:36:20][Administrador][DELETE FROM personas WHERE idPersona = 46 (nombre apell segundo);]
+
+[2023/05/20 19:36:33][Administrador][LOGOUT]
+
+[2023/05/20 19:38:35][Administrador][LOGIN]
+
+[2023/05/20 19:38:47][Administrador][INSERT INTO libros VALUES (null, 'nombrelibro', 'nivellibro', 'autor', 'editorial');]
+
+[2023/05/20 19:39:08][Administrador][LOGOUT]
+
+[2023/05/20 19:39:38][Administrador][LOGIN]
+
+[2023/05/20 19:39:55][Administrador][INSERT INTO libros VALUES (null, 'nombre', 'nivel', 'autor', 'editorial');]
+
+[2023/05/20 19:40:14][Administrador][LOGOUT]
+
+[2023/05/20 19:40:41][Administrador][LOGIN]
+
+[2023/05/20 19:40:51][Administrador][INSERT INTO libros VALUES (null, 'nombre', 'nivelq', 'autor', 'editorial');]
+
+[2023/05/20 19:41:16][Administrador][LOGOUT]
+
+[2023/05/20 19:41:40][Administrador][LOGIN]
+
+[2023/05/20 19:41:51][Administrador][INSERT INTO libros VALUES (null, 'nombre', 'nivel', 'autor', 'editorial');]
+
+[2023/05/20 19:42:02][Administrador][DELETE FROM libros WHERE idLibro = 23 (nombre nivel);]
+
+[2023/05/20 19:42:08][Administrador][LOGOUT]
+
+[2023/05/20 19:42:48][Administrador][LOGIN]
+
+[2023/05/20 19:43:11][Administrador][INSERT INTO libros VALUES (null, 'nombre nombre nombre', 'nivel', 'autor autor autor', 'editorial editorial');]
+
+[2023/05/20 19:43:24][Administrador][DELETE FROM libros WHERE idLibro = 24 (nombre nombre);]
+
+[2023/05/20 19:43:28][Administrador][LOGOUT]
+
+[2023/05/20 19:45:39][Administrador][LOGIN]
+
+[2023/05/20 19:45:50][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 17 (Antonio Pérez Jiménez Optimise A2 Students Book);]
+
+[2023/05/20 19:45:53][Administrador][LOGOUT]
+
+[2023/05/20 19:48:51][Administrador][LOGIN]
+
+[2023/05/20 19:49:03][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 12 WHERE idPersonaLibro = 13;]
+
+[2023/05/20 19:49:13][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 18;]
+
+[2023/05/20 19:49:19][Administrador][LOGOUT]
+
+[2023/05/20 19:55:12][Administrador][LOGIN]
+
+[2023/05/20 19:55:30][Administrador][UPDATE personasLibros SET idPersonaFK = 7, idLibroFK = 12 WHERE idPersonaLibro = 13;]
+
+[2023/05/20 19:55:43][Administrador][UPDATE personasLibros SET idPersonaFK = 36, idLibroFK = 1 WHERE idPersonaLibro = 18;]
+
+[2023/05/20 19:56:07][Administrador][UPDATE personasLibros SET idPersonaFK = 9, idLibroFK = 1 WHERE idPersonaLibro = 15;]
+
+[2023/05/20 19:56:13][Administrador][LOGOUT]
+
+[2023/05/20 19:56:23][Administrador][LOGIN]
+
+[2023/05/20 19:56:38][Administrador][UPDATE personasLibros SET idPersonaFK = 7, idLibroFK = 2 WHERE idPersonaLibro = 13;]
+
+[2023/05/20 19:56:41][Administrador][LOGOUT]
+
+[2023/05/20 19:56:54][Administrador][LOGIN]
+
+[2023/05/20 19:57:07][Administrador][UPDATE personasLibros SET idPersonaFK = 7, idLibroFK = 11 WHERE idPersonaLibro = 13;]
+
+[2023/05/20 19:57:15][Administrador][LOGOUT]
+
+[2023/05/20 20:01:47][Administrador][LOGIN]
+
+[2023/05/20 20:02:12][Administrador][LOGOUT]
+
+[2023/05/20 20:02:20][Administrador][LOGIN]
+
+[2023/05/20 20:03:10][Administrador][LOGOUT]
+
+[2023/05/20 20:03:26][Administrador][LOGIN]
+
+[2023/05/20 20:03:29][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:03:34][Administrador][SELECT * FROM libros]
+
+[2023/05/20 20:03:41][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:04:09][Administrador][LOGOUT]
+
+[2023/05/20 20:04:41][Administrador][LOGIN]
+
+[2023/05/20 20:04:45][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:04:53][Administrador][LOGOUT]
+
+[2023/05/20 20:05:10][Administrador][LOGIN]
+
+[2023/05/20 20:05:13][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:05:25][Administrador][LOGOUT]
+
+[2023/05/20 20:05:47][Administrador][LOGIN]
+
+[2023/05/20 20:05:50][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:05:56][Administrador][LOGOUT]
+
+[2023/05/20 20:06:16][Administrador][LOGIN]
+
+[2023/05/20 20:06:21][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:06:38][Administrador][LOGOUT]
+
+[2023/05/20 20:06:48][Administrador][LOGIN]
+
+[2023/05/20 20:06:51][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:06:56][Administrador][LOGOUT]
+
+[2023/05/20 20:08:05][Administrador][LOGIN]
+
+[2023/05/20 20:08:08][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:08:14][Administrador][LOGOUT]
+
+[2023/05/20 20:11:09][Administrador][LOGIN]
+
+[2023/05/20 20:11:13][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:11:25][Administrador][LOGOUT]
+
+[2023/05/20 20:13:13][Administrador][LOGIN]
+
+[2023/05/20 20:13:16][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:13:31][Administrador][LOGOUT]
+
+[2023/05/20 20:13:48][Administrador][LOGIN]
+
+[2023/05/20 20:13:52][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 20:13:55][Administrador][LOGOUT]
+
+[2023/05/20 20:14:42][Administrador][LOGIN]
+
+[2023/05/20 20:14:45][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:14:48][Administrador][SELECT * FROM libros]
+
+[2023/05/20 20:14:53][Administrador][SELECT * FROM libros]
+
+[2023/05/20 20:14:57][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:15:00][Administrador][LOGOUT]
+
+[2023/05/20 20:15:20][Administrador][LOGIN]
+
+[2023/05/20 20:15:23][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:15:28][Administrador][LOGOUT]
+
+[2023/05/20 20:15:46][Administrador][LOGIN]
+
+[2023/05/20 20:15:48][Administrador][SELECT * FROM libros]
+
+[2023/05/20 20:15:53][Administrador][LOGOUT]
+
+[2023/05/20 20:16:10][Administrador][LOGIN]
+
+[2023/05/20 20:16:13][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:16:18][Administrador][LOGOUT]
+
+[2023/05/20 20:16:30][Administrador][LOGIN]
+
+[2023/05/20 20:16:32][Administrador][SELECT * FROM personas]
+
+[2023/05/20 20:16:39][Administrador][LOGOUT]
+
+[2023/05/20 20:20:02][Usuario][LOGIN]
+
+[2023/05/20 20:20:16][Usuario][INSERT INTO personasLibros VALUES (null, 7 (Susana García Rodríguez), 1 (Optimise A2 Students Book);]
+
+[2023/05/20 20:20:28][Usuario][LOGOUT]
+
+[2023/05/20 20:28:55][Administrador][LOGIN]
+
+[2023/05/20 20:29:19][Administrador][LOGOUT]
+
+[2023/05/20 20:29:49][Administrador][LOGIN]
+
+[2023/05/20 20:30:13][Administrador][LOGOUT]
+
+[2023/05/20 21:28:59][Administrador][LOGIN]
+
+[2023/05/20 21:29:40][Administrador][LOGOUT]
+
+[2023/05/20 21:29:51][Usuario][LOGIN]
+
+[2023/05/20 21:31:55][Usuario][LOGOUT]
+
+[2023/05/20 21:32:07][Administrador][LOGIN]
+
+[2023/05/20 21:42:29][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/20 21:42:43][Administrador][LOGOUT]
+
+[2023/05/22 13:22:04][Administrador][LOGIN]
+
+[2023/05/22 13:28:22][Administrador][LOGOUT]
+
+[2023/05/23 13:03:41][Administrador][LOGIN]
+
+[2023/05/23 14:28:35][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Rodríguez), 12 (Gold Advanced Coursebook C1);]
+
+[2023/05/23 14:48:08][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/23 16:01:05][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 13;]
+
+[2023/05/23 16:01:11][Administrador][LOGOUT]
+
+[2023/05/23 16:50:13][Administrador][LOGIN]
+
+[2023/05/23 16:51:26][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 2 WHERE idPersonaLibro = 13;]
+
+[2023/05/23 16:51:45][Administrador][UPDATE personasLibros SET idPersonaFK = 9, idLibroFK = 12 WHERE idPersonaLibro = 23;]
+
+[2023/05/23 16:51:52][Administrador][LOGOUT]
+
+[2023/05/23 16:55:35][Administrador][LOGIN]
+
+[2023/05/23 16:56:03][Administrador][UPDATE personasLibros SET idPersonaFK = 9, idLibroFK = 11 WHERE idPersonaLibro = 15;]
+
+[2023/05/23 16:58:31][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 1 WHERE idPersonaLibro = 13;]
+
+[2023/05/23 16:58:36][Administrador][LOGOUT]
+
+[2023/05/23 17:00:18][Administrador][LOGIN]
+
+[2023/05/23 17:01:02][Administrador][UPDATE personasLibros SET idPersonaFK = 9, idLibroFK = 1 WHERE idPersonaLibro = 15;]
+
+[2023/05/23 17:01:06][Administrador][LOGOUT]
+
+[2023/05/23 17:03:04][Administrador][LOGIN]
+
+[2023/05/23 17:03:16][Administrador][UPDATE personasLibros SET idPersonaFK = 6, idLibroFK = 11 WHERE idPersonaLibro = 13;]
+
+[2023/05/23 17:03:26][Administrador][UPDATE personasLibros SET idPersonaFK = 9, idLibroFK = 11 WHERE idPersonaLibro = 15;]
+
+[2023/05/23 17:03:33][Administrador][LOGOUT]
+
+[2023/05/23 17:10:22][Administrador][LOGIN]
+
+[2023/05/23 17:24:27][Administrador][LOGOUT]
+
+[2023/05/28 12:56:57][Administrador][LOGIN]
+
+[2023/05/28 12:57:01][Administrador][SELECT * FROM personas]
+
+[2023/05/28 12:57:09][Administrador][LOGOUT]
+
+[2023/05/28 13:42:40][Administrador][LOGIN]
+
+[2023/05/28 13:42:42][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:42:48][Administrador][LOGOUT]
+
+[2023/05/28 13:49:08][Administrador][LOGIN]
+
+[2023/05/28 13:49:11][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:49:17][Administrador][LOGOUT]
+
+[2023/05/28 13:49:37][Administrador][LOGIN]
+
+[2023/05/28 13:49:40][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:49:45][Administrador][LOGOUT]
+
+[2023/05/28 13:50:26][Administrador][LOGIN]
+
+[2023/05/28 13:50:29][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:50:32][Administrador][LOGOUT]
+
+[2023/05/28 13:51:00][Administrador][LOGIN]
+
+[2023/05/28 13:51:03][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:51:07][Administrador][LOGOUT]
+
+[2023/05/28 13:51:17][Administrador][LOGIN]
+
+[2023/05/28 13:51:20][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:51:23][Administrador][LOGOUT]
+
+[2023/05/28 13:51:41][Administrador][LOGIN]
+
+[2023/05/28 13:51:44][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:51:48][Administrador][LOGOUT]
+
+[2023/05/28 13:52:01][Administrador][LOGIN]
+
+[2023/05/28 13:52:03][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:52:09][Administrador][LOGOUT]
+
+[2023/05/28 13:58:04][Administrador][LOGIN]
+
+[2023/05/28 13:58:07][Administrador][SELECT * FROM personas]
+
+[2023/05/28 13:58:13][Administrador][LOGOUT]
+
+[2023/05/28 14:11:53][Administrador][LOGIN]
+
+[2023/05/28 14:11:55][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:12:00][Administrador][LOGOUT]
+
+[2023/05/28 14:14:29][Administrador][LOGIN]
+
+[2023/05/28 14:14:31][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:14:38][Administrador][LOGOUT]
+
+[2023/05/28 14:15:02][Administrador][LOGIN]
+
+[2023/05/28 14:15:04][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:15:08][Administrador][LOGOUT]
+
+[2023/05/28 14:17:25][Administrador][LOGIN]
+
+[2023/05/28 14:17:27][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:17:31][Administrador][LOGOUT]
+
+[2023/05/28 14:20:48][Administrador][LOGIN]
+
+[2023/05/28 14:20:51][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:20:55][Administrador][LOGOUT]
+
+[2023/05/28 14:22:47][Administrador][LOGIN]
+
+[2023/05/28 14:22:49][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:23:02][Administrador][LOGOUT]
+
+[2023/05/28 14:23:23][Administrador][LOGIN]
+
+[2023/05/28 14:23:26][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:23:33][Administrador][LOGOUT]
+
+[2023/05/28 14:25:06][Administrador][LOGIN]
+
+[2023/05/28 14:25:08][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:25:17][Administrador][LOGOUT]
+
+[2023/05/28 14:30:40][Administrador][LOGIN]
+
+[2023/05/28 14:30:43][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:30:49][Administrador][LOGOUT]
+
+[2023/05/28 14:31:22][Administrador][LOGIN]
+
+[2023/05/28 14:31:24][Administrador][SELECT * FROM personas]
+
+[2023/05/28 14:31:40][Administrador][LOGOUT]
+
+[2023/05/28 16:05:22][Administrador][LOGIN]
+
+[2023/05/28 16:05:25][Administrador][SELECT * FROM personas]
+
+[2023/05/28 16:05:37][Administrador][LOGOUT]
+
+[2023/05/28 16:06:45][Administrador][LOGIN]
+
+[2023/05/28 16:07:18][Administrador][SELECT * FROM personas]
+
+[2023/05/28 16:07:31][Administrador][LOGOUT]
+
+[2023/05/28 16:08:40][Administrador][LOGIN]
+
+[2023/05/28 16:08:42][Administrador][SELECT * FROM personas]
+
+[2023/05/28 16:08:46][Administrador][LOGOUT]
+
+[2023/05/28 17:29:43][Administrador][LOGIN]
+
+[2023/05/28 17:29:46][Administrador][SELECT * FROM personas]
+
+[2023/05/28 17:29:51][Administrador][LOGOUT]
+
+[2023/05/28 17:34:57][Administrador][LOGIN]
+
+[2023/05/28 17:35:00][Administrador][SELECT * FROM personas]
+
+[2023/05/28 17:35:15][Administrador][LOGOUT]
+
+[2023/05/28 17:35:46][Administrador][LOGIN]
+
+[2023/05/28 17:35:49][Administrador][SELECT * FROM personas]
+
+[2023/05/28 17:36:01][Administrador][LOGOUT]
+
+[2023/05/28 17:42:27][Administrador][LOGIN]
+
+[2023/05/28 17:42:29][Administrador][SELECT * FROM personas]
+
+[2023/05/28 17:43:14][Administrador][LOGOUT]
+
+[2023/05/28 17:43:50][Administrador][LOGIN]
+
+[2023/05/28 17:43:53][Administrador][SELECT * FROM personas]
+
+[2023/05/28 17:58:34][Administrador][LOGOUT]
+
+[2023/05/28 18:09:22][Administrador][LOGIN]
+
+[2023/05/28 18:09:25][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:10:01][Administrador][LOGOUT]
+
+[2023/05/28 18:10:29][Administrador][LOGIN]
+
+[2023/05/28 18:10:32][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:11:15][Administrador][LOGOUT]
+
+[2023/05/28 18:11:34][Administrador][LOGIN]
+
+[2023/05/28 18:11:36][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:11:58][Administrador][LOGOUT]
+
+[2023/05/28 18:12:11][Administrador][LOGIN]
+
+[2023/05/28 18:12:14][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:12:32][Administrador][LOGOUT]
+
+[2023/05/28 18:13:39][Administrador][LOGIN]
+
+[2023/05/28 18:13:42][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:14:05][Administrador][LOGOUT]
+
+[2023/05/28 18:14:19][Administrador][LOGIN]
+
+[2023/05/28 18:14:30][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:14:36][Administrador][LOGOUT]
+
+[2023/05/28 18:15:14][Administrador][LOGIN]
+
+[2023/05/28 18:15:16][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:15:37][Administrador][LOGOUT]
+
+[2023/05/28 18:15:51][Administrador][LOGIN]
+
+[2023/05/28 18:15:54][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:17:24][Administrador][LOGOUT]
+
+[2023/05/28 18:20:57][Administrador][LOGIN]
+
+[2023/05/28 18:21:00][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:21:17][Administrador][LOGOUT]
+
+[2023/05/28 18:21:36][Administrador][LOGIN]
+
+[2023/05/28 18:21:39][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:21:56][Administrador][LOGOUT]
+
+[2023/05/28 18:23:01][Administrador][LOGIN]
+
+[2023/05/28 18:23:04][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:23:08][Administrador][LOGOUT]
+
+[2023/05/28 18:24:17][Administrador][LOGIN]
+
+[2023/05/28 18:24:21][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:24:24][Administrador][LOGOUT]
+
+[2023/05/28 18:25:51][Administrador][LOGIN]
+
+[2023/05/28 18:25:53][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:25:58][Administrador][LOGOUT]
+
+[2023/05/28 18:28:29][Administrador][LOGIN]
+
+[2023/05/28 18:28:31][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:28:37][Administrador][LOGOUT]
+
+[2023/05/28 18:29:38][Administrador][LOGIN]
+
+[2023/05/28 18:29:40][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:29:52][Administrador][LOGOUT]
+
+[2023/05/28 18:31:52][Administrador][LOGIN]
+
+[2023/05/28 18:31:55][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:32:03][Administrador][SELECT * FROM personas]
+
+[2023/05/28 18:32:12][Administrador][LOGOUT]
+
+[2023/05/28 18:38:12][Administrador][LOGIN]
+
+[2023/05/28 18:38:15][Administrador][SELECT * FROM libros]
+
+[2023/05/28 18:38:33][Administrador][LOGOUT]
+
+[2023/05/28 18:39:06][Administrador][LOGIN]
+
+[2023/05/28 18:39:09][Administrador][SELECT * FROM libros]
+
+[2023/05/28 18:39:23][Administrador][LOGOUT]
+
+[2023/05/28 18:39:36][Administrador][LOGIN]
+
+[2023/05/28 18:39:39][Administrador][SELECT * FROM libros]
+
+[2023/05/28 18:39:50][Administrador][LOGOUT]
+
+[2023/05/28 18:43:06][Administrador][LOGIN]
+
+[2023/05/28 18:43:08][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:43:24][Administrador][LOGOUT]
+
+[2023/05/28 18:44:19][Administrador][LOGIN]
+
+[2023/05/28 18:44:22][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:44:44][Administrador][LOGOUT]
+
+[2023/05/28 18:47:36][Administrador][LOGIN]
+
+[2023/05/28 18:47:39][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:47:56][Administrador][LOGOUT]
+
+[2023/05/28 18:48:53][Administrador][LOGIN]
+
+[2023/05/28 18:48:56][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:49:09][Administrador][LOGOUT]
+
+[2023/05/28 18:49:50][Administrador][LOGIN]
+
+[2023/05/28 18:49:53][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:50:09][Administrador][LOGOUT]
+
+[2023/05/28 18:50:39][Administrador][LOGIN]
+
+[2023/05/28 18:50:42][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:50:53][Administrador][LOGOUT]
+
+[2023/05/28 18:51:42][Administrador][LOGIN]
+
+[2023/05/28 18:51:45][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:51:57][Administrador][LOGOUT]
+
+[2023/05/28 18:52:12][Administrador][LOGIN]
+
+[2023/05/28 18:52:14][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/28 18:52:27][Administrador][LOGOUT]
+
+[2023/05/28 22:58:26][Administrador][LOGIN]
+
+[2023/05/28 22:58:33][Administrador][LOGOUT]
+
+[2023/05/29 00:53:33][Administrador][LOGIN]
+
+[2023/05/29 00:54:16][Administrador][LOGOUT]
+
+[2023/05/29 01:05:37][Administrador][LOGIN]
+
+[2023/05/29 01:05:41][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/29 01:06:05][Administrador][LOGOUT]
+
+[2023/05/29 01:14:39][Administrador][LOGIN]
+
+[2023/05/29 01:15:04][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Rodríguez), 11 (Gateway B2+ Students Book);]
+
+[2023/05/29 01:15:09][Administrador][LOGOUT]
+
+[2023/05/29 01:15:29][Administrador][LOGIN]
+
+[2023/05/29 01:15:40][Administrador][DELETE FROM personasLibros WHERE idPersonaLibro = 24 (Susana García Rodríguez Gateway B2+ Students Book);]
+
+[2023/05/29 01:15:50][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Rodríguez), 11 (Gateway B2+ Students Book);]
+
+[2023/05/29 01:15:53][Administrador][LOGOUT]
+
+[2023/05/29 01:18:10][Administrador][LOGIN]
+
+[2023/05/29 01:18:17][Administrador][INSERT INTO personasLibros VALUES (null, 7 (Susana García Rodríguez), 12 (Gold Advanced Coursebook C1);]
+
+[2023/05/29 01:18:29][Administrador][LOGOUT]
+
+[2023/05/29 01:25:20][Administrador][LOGIN]
+
+[2023/05/29 01:25:23][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/29 01:26:34][Administrador][LOGOUT]
+
+[2023/05/29 01:34:20][Administrador][LOGIN]
+
+[2023/05/29 02:43:10][Administrador][LOGOUT]
+
+[2023/05/29 10:22:31][Administrador][LOGIN]
+
+[2023/05/29 11:13:40][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/29 11:14:26][Administrador][LOGOUT]
+
+[2023/05/29 12:28:21][Administrador][LOGIN]
+
+[2023/05/29 12:28:24][Administrador][SELECT * FROM personas]
+
+[2023/05/29 12:28:34][Administrador][LOGOUT]
+
+[2023/05/29 12:28:45][Administrador][LOGIN]
+
+[2023/05/29 12:28:48][Administrador][SELECT * FROM libros]
+
+[2023/05/29 12:28:59][Administrador][SELECT * FROM personasLibros]
+
+[2023/05/29 12:29:13][Administrador][SELECT * FROM libros]
+
+[2023/05/29 12:29:22][Administrador][SELECT * FROM personas]
+
+[2023/05/29 12:34:01][Administrador][LOGOUT]
+
+[2023/05/29 15:30:00][Administrador][LOGIN]
+
+[2023/05/29 15:30:21][Administrador][LOGOUT]
+
+[2023/05/29 15:38:55][Administrador][LOGIN]
+
+[2023/05/29 15:39:10][Administrador][LOGOUT]
+
+[2023/05/29 15:39:25][Administrador][LOGIN]
+
+[2023/05/29 15:39:38][Administrador][LOGOUT]
+
+[2023/05/29 15:40:54][Administrador][LOGIN]
+
+[2023/05/29 15:40:59][Administrador][LOGOUT]
+
+[2023/05/29 15:41:15][Administrador][LOGIN]
+
+[2023/05/29 15:41:21][Administrador][LOGOUT]
+
+[2023/05/29 15:41:39][Administrador][LOGIN]
+
+[2023/05/29 15:41:43][Administrador][LOGOUT]
+
+[2023/05/29 15:41:53][Administrador][LOGIN]
+
+[2023/05/29 15:41:56][Administrador][LOGOUT]
+
+[2023/05/29 15:42:09][Administrador][LOGIN]
+
+[2023/05/29 15:42:14][Administrador][LOGOUT]
+
+[2023/05/29 15:42:58][Administrador][LOGIN]
+
+[2023/05/29 15:43:01][Administrador][LOGOUT]
+
+[2023/05/29 15:43:20][Administrador][LOGIN]
+
+[2023/05/29 15:43:24][Administrador][LOGOUT]
+
+[2023/05/29 15:43:34][Administrador][LOGIN]
+
+[2023/05/29 15:43:37][Administrador][LOGOUT]
+
+[2023/05/29 15:44:09][Administrador][LOGIN]
+
+[2023/05/29 15:44:12][Administrador][LOGOUT]
+
+[2023/05/29 15:45:46][Administrador][LOGIN]
+
+[2023/05/29 15:45:51][Administrador][LOGOUT]
+
+[2023/05/29 15:46:06][Administrador][LOGIN]
+
+[2023/05/29 15:46:12][Administrador][LOGOUT]
+
+[2023/05/29 15:46:26][Administrador][LOGIN]
+
+[2023/05/29 15:46:30][Administrador][LOGOUT]
+
+[2023/05/29 15:46:54][Administrador][LOGIN]
+
+[2023/05/29 15:46:57][Administrador][LOGOUT]
+
+[2023/05/29 15:50:29][Administrador][LOGIN]
+
+[2023/05/29 15:50:33][Administrador][LOGOUT]
+
+[2023/05/29 15:51:01][Administrador][LOGIN]
+
+[2023/05/29 15:51:05][Administrador][LOGOUT]
+
+[2023/05/29 15:51:14][Administrador][LOGIN]
+
+[2023/05/29 15:51:18][Administrador][LOGOUT]
+
+[2023/05/29 15:51:27][Administrador][LOGIN]
+
+[2023/05/29 15:51:32][Administrador][LOGOUT]
+
+[2023/05/29 16:20:35][Administrador][LOGIN]
+
+[2023/05/29 16:20:45][Administrador][LOGOUT]
+
+[2023/05/29 16:24:28][Administrador][LOGIN]
+
+[2023/05/29 16:24:35][Administrador][LOGOUT]
+
+[2023/05/29 16:25:31][Administrador][LOGIN]
+
+[2023/05/29 16:25:36][Administrador][LOGOUT]
+
+[2023/05/29 16:27:45][Administrador][LOGIN]
+
+[2023/05/29 16:27:52][Administrador][LOGOUT]
+
+[2023/05/29 16:28:04][Administrador][LOGIN]
+
+[2023/05/29 16:28:11][Administrador][LOGOUT]
+
+[2023/05/29 16:29:22][Administrador][LOGIN]
+
+[2023/05/29 16:35:30][Administrador][LOGOUT]
+
+[2023/05/29 16:35:40][Administrador][LOGIN]
+
+[2023/05/29 16:40:20][Administrador][LOGOUT]
+
+[2023/05/29 16:48:38][Administrador][LOGIN]
+
+[2023/05/29 16:52:39][Administrador][LOGOUT]
+
+[2023/05/29 16:52:50][Administrador][LOGIN]
+
+[2023/05/29 16:53:39][Administrador][LOGOUT]
+
+[2023/05/29 16:53:49][Administrador][LOGIN]
+
+[2023/05/29 16:54:30][Administrador][LOGOUT]
+
+[2023/05/29 20:39:44][Administrador][LOGIN]
+
+[2023/05/29 20:39:55][Administrador][LOGOUT]
+
+[2023/05/29 20:40:17][Administrador][LOGIN]
+
+[2023/05/29 20:41:09][Administrador][LOGOUT]
+
+[2023/05/29 20:44:32][Usuario][LOGIN]
+
+[2023/05/29 20:46:00][Usuario][LOGOUT]
+
+[2023/05/29 20:46:09][Administrador][LOGIN]
+
+[2023/05/29 21:26:39][Administrador][LOGOUT]
+
+[2023/05/29 21:42:26][Administrador][LOGIN]
+
+[2023/05/29 21:43:25][Administrador][LOGOUT]
+
+[2023/05/29 21:44:59][Administrador][LOGIN]
+
+[2023/05/29 21:45:05][Administrador][LOGOUT]
+
+[2023/05/29 21:45:23][Administrador][LOGIN]
+
+[2023/05/29 21:45:30][Administrador][LOGOUT]
+
+[2023/05/29 21:45:49][Administrador][LOGIN]
+
+[2023/05/29 21:45:53][Administrador][LOGOUT]
+
+[2023/05/29 21:46:12][Administrador][LOGIN]
+
+[2023/05/29 21:46:16][Administrador][LOGOUT]
+
+[2023/05/29 21:51:25][Administrador][LOGIN]
+
+[2023/05/29 21:55:55][Administrador][LOGOUT]
+
