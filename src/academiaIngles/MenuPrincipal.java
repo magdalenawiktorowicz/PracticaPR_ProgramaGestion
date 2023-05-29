@@ -164,6 +164,7 @@ public class MenuPrincipal extends Frame implements WindowListener, ActionListen
 			new PersonasLibrosModificacion(usuario);
 		}
 		else if(e.getSource().equals(mniAyuda)) {
+			// abrir una página web de ayuda
 			conexion.ayuda();
 		}
 	}
